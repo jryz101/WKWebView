@@ -39,6 +39,15 @@ class ViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //A value that identifies the location of a resource, such as an item on a remote server or the path to a local file
+        let myURL = URL(string: "https://www.starknet-tech.com")
+        
+        //A URL load request that is independent of protocol or URL scheme
+        let myRequest = URLRequest(url: myURL!)
+        
+        //Navigates to a requested URL, A new navigation for the given request.
+        webView.load(myRequest)
+        
     }
 }
 
